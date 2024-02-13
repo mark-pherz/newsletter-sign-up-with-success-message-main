@@ -1,0 +1,201 @@
+:root {
+  --tomato-color: hsl(4, 100%, 67%);
+  --dark-slate-grey-color: hsl(234, 29%, 20%);
+  --charcoal-grey-color: hsl(235, 18%, 26%);
+  --grey-color: hsl(231, 7%, 60%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "roboto-regular";
+  src: url(./assets/fonts/Roboto-Regular.woff2) format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  src: url(./assets/fonts/Roboto-Bold.woff2) format("woff2");
+  font-weight: 700;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--charcoal-grey-color);
+}
+
+.main-card {
+  background-color: var(--white-color);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 60vw auto;
+}
+
+.tnankYouCard {
+  background-color: var(--white-color);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: end;
+  padding: 24px;
+  display: none;
+}
+
+.tnankYouCard .message {
+  display: grid;
+  gap: 24px;
+}
+
+.tnankYouCard .message h1 {
+  font-family: "roboto-bold", sans-serif;
+}
+
+.tnankYouCard .message p {
+  font-family: "roboto-regular", sans-serif;
+}
+
+.bold {
+  font-family: "roboto-bold", sans-serif;
+}
+
+.tnankYouCard button {
+  margin-bottom: 24px;
+  height: 54px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--charcoal-grey-color);
+  color: var(--white-color);
+  font-family: "roboto-bold", sans-serif;
+}
+
+.tnankYouCard button:hover {
+  background-color: var(--tomato-color);
+}
+
+.main-card .main-card-img {
+  background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+  background-size: cover;
+  border-radius: 0 0 24px 24px;
+  background-position: center;
+}
+
+.main-card .main-card-content {
+  padding: 24px;
+}
+
+.main-card-content h1 {
+  font-family: "roboto-bold", sans-serif;
+  margin-bottom: 16px;
+}
+
+.main-card-content p {
+  font-family: "roboto-regular", sans-serif;
+  margin-bottom: 24px;
+}
+
+.main-card-content ul {
+  font-family: "roboto-regular", sans-serif;
+  margin-bottom: 36px;
+}
+
+.custom-icon {
+  padding-left: 36px;
+  background-image: url(./assets/images/icon-list.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px 20px;
+  margin-bottom: 10px;
+}
+
+.main-card-content form {
+  display: grid;
+}
+
+#guf {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 8px;
+}
+
+.main-card-content form label {
+  font-family: "roboto-bold", sans-serif;
+  font-size: 0.875rem;
+}
+
+.main-card-content form input {
+  height: 54px;
+  border-radius: 12px;
+  border: none;
+}
+
+#email {
+  border: 1px solid var(--grey-color);
+  padding-left: 24px;
+  outline: none;
+  margin: 6px 0 24px 0;
+}
+
+#email:focus {
+  border: 1px solid var(--charcoal-grey-color);
+}
+
+#submit {
+  background-color: var(--charcoal-grey-color);
+  color: var(--white-color);
+  font-family: "roboto-bold", sans-serif;
+}
+
+#submit:hover {
+  background-color: var(--tomato-color);
+  box-shadow: 0px 0px 24px var(--tomato-color);
+}
+
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-card {
+    padding: 24px;
+    border-radius: 24px;
+    min-height: unset;
+    gap: 36px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: unset;
+    margin: 0 20px;
+    max-width: 900px;
+  }
+  .main-card-content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .main-card .main-card-img {
+    border-radius: 20px;
+    overflow: hidden;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .tnankYouCard {
+    min-height: unset;
+    grid-template-rows: unset;
+    align-items: unset;
+    padding: 24px;
+    margin: 0 20px;
+    border-radius: 24px;
+    max-width: 450px;
+    padding: 48px;
+  }
+
+  .tnankYouCard button {
+    margin-top: 48px;
+    margin-bottom: 0;
+  }
+}
