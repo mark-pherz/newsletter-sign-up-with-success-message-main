@@ -126,17 +126,27 @@ body {
   font-size: 0.875rem;
 }
 
-.main-card-content form input {
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+}
+
+.email-field {
   height: 54px;
   border-radius: 12px;
   border: none;
 }
 
-#email {
+.email-field {
   border: 1px solid var(--grey-color);
   padding-left: 24px;
   outline: none;
   margin: 6px 0 24px 0;
+}
+
+.email-error {
+  border: 1px solid red;
+  background-color: rgb(255, 226, 219);
 }
 
 #email:focus {
@@ -147,6 +157,9 @@ body {
   background-color: var(--charcoal-grey-color);
   color: var(--white-color);
   font-family: "roboto-bold", sans-serif;
+  height: 54px;
+  border-radius: 12px;
+  border: none;
 }
 
 #submit:hover {
